@@ -8,30 +8,26 @@ let allHeroes = [
     ["Smurf" , 15355],
     ["Candelun" , 510]
 ]
-let quantHeroes = allHeroes.length
-let ordemHeroes = 1
+let elo = ["Ferro","Bronze","Prata","Ouro","Platina","Ascendente","Imortal","Radiante"]
 // Estrutura de decisão para apresentar alguma das mensagens abaixo:
-console.log("Existe o total de " + quantHeroes + " herois e seus nomes são:")
+console.log("Existe o total de " + allHeroes.length + " herois e seus nomes são:")
 console.log("######## Lista de herois ########")
-for (let hero = 0; hero < quantHeroes; hero++) {
-    console.log("Nome: " + allHeroes[hero][0])  
-    console.log("Experiencia: " + allHeroes[hero][1])
+for (let hero = 0; hero < allHeroes.length; hero++) {
+    let myElo = ""
+    switch (allHeroes) {
+        case allHeroes[hero][1] > 0 || allHeroes[hero][1] < 1000 :
+              
+            break
+    
+        default:
+            
+            break
+    }
+    
+    console.log("Nome: " + allHeroes[hero][0] + " Experiencia: " + allHeroes[hero][1] + " Elo: " + elo)
     console.log("--------------------------------")
 }
 
-switch (ordemHeroes) {
-    case 1:
-        if (allHeroes[0][1] ) {
-            
-        }
-        console.log("O nome do heroi é " + allHeroes[0][0] + " e contem " + allHeroes[0][1] + " de experiencia ")
-        break
-
-    default:
-        
-        break
-}
 // Apresentação de mensagem sobre herois e ELOs
- 
 
 
