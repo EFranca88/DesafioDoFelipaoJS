@@ -9,7 +9,7 @@ let allHeroes = [
     ["Candelun" , 510]
 ]
 let elo = ["Ferro","Bronze","Prata","Ouro","Platina","Ascendente","Imortal","Radiante"]
-
+const tracejado = "--------------------------------"
 // Estrutura de decisão para apresentar as mensagens para heroi selecionado
 console.log("######## Lista de herois ########")
 for (let hero = 0; hero < allHeroes.length; hero++) {
@@ -17,7 +17,7 @@ for (let hero = 0; hero < allHeroes.length; hero++) {
     console.log((hero + 1) + "º Heroi " + element)
 }
 
-let selectedHero = 2 // <<<<<<<<<< VALOR ORDINAL DO HEROI AQUI <<<<<<<<<<
+let selectedHero = 2 // <<<<<<<<<< VALOR DO HEROI AQUI <<<<<<<<<<
 if (selectedHero !== allHeroes.length) {
     let myElo = ""
     if (allHeroes[selectedHero][1] > 0 && allHeroes[selectedHero][1] < 1000) {
@@ -37,12 +37,10 @@ if (selectedHero !== allHeroes.length) {
     } else {
         myElo = elo[7]
     }       
-    console.log("--------------------------------")
-    console.log("Informações do Heroi selecionado")        
-    console.log("Nome: " + allHeroes[selectedHero][0])
-    console.log("Experiencia: " + allHeroes[selectedHero][1])
-    console.log("Elo: " + myElo)
-    console.log("--------------------------------")
+    console.log(tracejado)
+    console.log("Informações do Heroi selecionado")  
+    console.log("O Herói de nome " + allHeroes[selectedHero][0] +" está no nível " + myElo)      
+    console.log(tracejado)
 } else {
     // Estrutura caso nenhum heroi seja selecionado
     console.log("Existe o total de " + allHeroes.length + " herois e seus nomes são:")
@@ -66,8 +64,9 @@ if (selectedHero !== allHeroes.length) {
         } else {
             myElo = elo[7]
         }       
-            
-        console.log("Nome: " + allHeroes[hero][0] + " Experiencia: " + allHeroes[hero][1] + " Elo: " + myElo)
-        console.log("--------------------------------")
+        console.log("Nome: " + allHeroes[hero][0])
+        console.log("Experiencia: " + allHeroes[hero][1])
+        console.log("Elo: " + myElo)  
+        console.log(tracejado)
     }
 }
